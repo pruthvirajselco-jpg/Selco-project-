@@ -1,0 +1,85 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Application {
+  id                    String   @id @default(uuid())
+  createdAt             DateTime @default(now())
+
+  // Section 1: Basic Details
+  fullName             String
+  preferredName        String?
+  pronouns             String?
+  age                  Int
+  nationality          String
+  email                String   @unique
+  phone                String
+  cityState            String
+  country              String
+  linkedinUrl          String?
+  portfolioUrl         String
+  currentOrg           String
+  yearsExperience      String
+  primaryDiscipline    String
+  howHeard             String?
+
+  // Section 2: Professional Experience
+  currentPractice      String
+  cvPortfolioUrl       String?  // Local upload path or Supabase URL
+  notableProjects      String
+  naturalMaterialExp   String
+  naturalMaterialDesc  String?
+  fieldWorkExp         String
+  makingChangedMind    String
+
+  // Section 3: Why This Residency
+  whyApplying          String
+  whatExcites          String
+  uniqueLearning       String
+  bambooFuture         String
+  whatToBuild          String
+
+  // Section 4: Field Immersion Readiness
+  canRelocate          String
+  remoteComfort        String
+  physicalComfort      String
+  teamExperience       String
+  anticipatedChallenges String
+  supportSystems       String
+  ongroundCollab       String
+
+  // Section 5: Creative Thinking
+  thinkingExample      String
+  creativeUploadUrl    String?  // Local upload path or Supabase URL
+  badlyDesigned        String
+  bamboo2050           String
+  goodDesignDef        String
+
+  // Section 6: References
+  ref1Name             String
+  ref1Relationship     String
+  ref1Email            String
+  ref1Phone            String?
+  ref1Context          String
+  ref2Name             String?
+  ref2Relationship     String?
+  ref2Email            String?
+  ref2Phone            String?
+
+  // Section 7: Declaration & Commitment
+  decFullTime         Boolean  @default(false)
+  decAvailability      Boolean  @default(false)
+  decMediaConsent     Boolean  @default(false)
+  decOpenSource       Boolean  @default(false)
+  decAccuracy          Boolean  @default(false)
+  additionalNotes      String?
+
+  // Admin Controls
+  status               String   @default("submitted") // submitted | shortlisted | rejected | selected
+  adminNotes           String?
+}
