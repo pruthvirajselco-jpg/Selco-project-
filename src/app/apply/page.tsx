@@ -6,7 +6,7 @@ import { ArrowLeft, Loader2 } from 'lucide-react';
 
 export default function ApplyPage() {
   useEffect(() => {
-    window.location.replace('https://forms.gle/pJrUAV2KGf1F4MDeA');
+    window.location.replace('https://forms.gle/zkvwtg4UHmk4prRV9');
   }, []);
 
   return (
@@ -19,7 +19,7 @@ export default function ApplyPage() {
         </p>
         <p className="font-dmsans text-xs text-grey-mid">
           If you are not redirected automatically,{' '}
-          <a href="https://forms.gle/pJrUAV2KGf1F4MDeA" className="text-green-primary font-bold underline hover:text-green-mid">
+          <a href="https://forms.gle/zkvwtg4UHmk4prRV9" className="text-green-primary font-bold underline hover:text-green-mid">
             click here
           </a>.
         </p>

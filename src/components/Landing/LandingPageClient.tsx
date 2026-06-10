@@ -132,7 +132,7 @@ export default function LandingPageClient() {
         {/* Right CTA Button (Desktop) */}
         <div className="hidden lg:block">
           <a
-            href="https://forms.gle/pJrUAV2KGf1F4MDeA"
+            href="https://forms.gle/zkvwtg4UHmk4prRV9"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-primary hover:bg-green-mid text-off-white text-xs font-semibold px-6 py-3 rounded-md transition-all tracking-wider uppercase inline-flex items-center gap-2 border border-green-light shadow-sm"
@@ -192,7 +192,7 @@ export default function LandingPageClient() {
             </Link>
           </nav>
           <a
-            href="https://forms.gle/pJrUAV2KGf1F4MDeA"
+            href="https://forms.gle/zkvwtg4UHmk4prRV9"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
@@ -247,7 +247,7 @@ export default function LandingPageClient() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 w-full sm:w-auto">
               <a
-                href="https://forms.gle/pJrUAV2KGf1F4MDeA"
+                href="https://forms.gle/zkvwtg4UHmk4prRV9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto bg-green-primary hover:bg-green-mid text-off-white font-semibold px-8 py-4 rounded-md transition-all tracking-wider uppercase text-center inline-flex items-center justify-center gap-2 border border-green-light shadow-md"
@@ -263,63 +263,68 @@ export default function LandingPageClient() {
             </div>
           </div>
 
-          {/* Right Column (40%) - Premium graphic pavilion render */}
-          <div className="lg:col-span-5 relative w-full h-[400px] md:h-[520px] rounded-2xl overflow-hidden border border-grey-border shadow-lg bg-green-primary flex flex-col justify-between p-8 reveal-element">
-
-            {/* SVG decorative grid lines */}
-            <div className="absolute inset-0 opacity-15 pointer-events-none">
-              <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#F7F4EF" strokeWidth="0.5" />
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#grid)" />
-              </svg>
-            </div>
-
-            {/* Immersive generated Image */}
-            <div className="absolute inset-0 z-0">
-              <Image
-                src="/images/bamboo-structure.png"
-                alt="Organic bamboo structure in a misty Meghalaya jungle"
-                fill
-                priority
-                className="object-cover object-center opacity-85 hover:scale-105 transition-transform duration-1000"
-              />
-              {/* Gradient layer for text overlay readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
-            </div>
-
-            {/* Stat Pill Glass Overlay */}
-            <div className="relative z-10 flex justify-end">
-              <span className="text-[10px] uppercase font-bold tracking-[0.15em] px-3 py-1 rounded bg-black/45 backdrop-blur-md text-beige-light border border-white/10">
-                Design Focus: Structural Systems
-              </span>
-            </div>
-
-            {/* Group of Stat Pills (glass style) */}
-            <div className="relative z-10 grid grid-cols-3 gap-2">
-              <div className="bg-black/40 backdrop-blur-md border border-white/15 p-4 rounded-xl text-center">
-                <div className="font-fraunces font-bold text-2xl md:text-3xl text-beige-light">15</div>
-                <div className="text-[9px] uppercase tracking-wider text-off-white/80 mt-1">Design residents selected nationally</div>
+          {/* Right Column (40%) */}
+          <div className="lg:col-span-5 flex flex-col gap-6 reveal-element">
+            
+            {/* Moved text boxes above the image */}
+            <div className="flex flex-col gap-4">
+              <div className="flex justify-end">
+                <span className="text-[10px] uppercase font-bold tracking-[0.15em] px-3 py-1 rounded bg-green-primary/10 text-green-primary border border-green-primary/20">
+                  Design Focus: Structural Systems
+                </span>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-white/15 p-4 rounded-xl text-center">
-                <div className="font-fraunces font-bold text-2xl md:text-3xl text-beige-light">6</div>
-                <div className="text-[9px] uppercase tracking-wider text-off-white/80 mt-1">Months of full-time field immersion in Meghalaya</div>
-              </div>
-              <div className="bg-black/40 backdrop-blur-md border border-white/15 p-4 rounded-xl text-center">
-                <div className="font-fraunces font-bold text-xl md:text-2xl text-beige-light">40+</div>
-                <div className="text-[9px] uppercase tracking-wider text-off-white/80 mt-1">Bamboo species native to Meghalaya</div>
+
+              {/* Group of Stat Pills */}
+              <div className="grid grid-cols-3 gap-2">
+                <div className="bg-white border border-grey-border shadow-sm p-4 rounded-xl text-center">
+                  <div className="font-fraunces font-bold text-2xl md:text-3xl text-green-primary">15</div>
+                  <div className="text-[9px] uppercase tracking-wider text-grey-dark mt-1">Design residents selected nationally</div>
+                </div>
+                <div className="bg-white border border-grey-border shadow-sm p-4 rounded-xl text-center">
+                  <div className="font-fraunces font-bold text-2xl md:text-3xl text-green-primary">6</div>
+                  <div className="text-[9px] uppercase tracking-wider text-grey-dark mt-1">Months of full-time field immersion in Meghalaya</div>
+                </div>
+                <div className="bg-white border border-grey-border shadow-sm p-4 rounded-xl text-center">
+                  <div className="font-fraunces font-bold text-xl md:text-2xl text-green-primary">40+</div>
+                  <div className="text-[9px] uppercase tracking-wider text-grey-dark mt-1">Bamboo species native to Meghalaya</div>
+                </div>
               </div>
             </div>
 
-            {/* Bottom context citation */}
-            <div className="relative z-10 flex flex-col text-left">
-              <span className="text-[10px] text-off-white/70 uppercase tracking-widest font-semibold">COHORT CYCLE 2026–2027</span>
-              <span className="text-xs font-fraunces italic text-beige-light mt-1">
-                A programme of Meghalaya Bamboo Mission · Prime Meghalaya · Government of Meghalaya
-              </span>
+            {/* Premium graphic pavilion render */}
+            <div className="relative w-full h-[300px] md:h-[380px] rounded-2xl overflow-hidden border border-grey-border shadow-lg bg-green-primary flex flex-col justify-end p-8">
+              {/* SVG decorative grid lines */}
+              <div className="absolute inset-0 opacity-15 pointer-events-none">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#F7F4EF" strokeWidth="0.5" />
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#grid)" />
+                </svg>
+              </div>
+
+              {/* Immersive generated Image */}
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/images/60c80e6a6d855e001815809e.jpg"
+                  alt="Organic bamboo structure in a misty Meghalaya jungle"
+                  fill
+                  priority
+                  className="object-cover object-center opacity-85 hover:scale-105 transition-transform duration-1000"
+                />
+                {/* Gradient layer for text overlay readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
+              </div>
+
+              {/* Bottom context citation */}
+              <div className="relative z-10 flex flex-col text-left">
+                <span className="text-[10px] text-off-white/70 uppercase tracking-widest font-semibold">COHORT CYCLE 2026–2027</span>
+                <span className="text-xs font-fraunces italic text-beige-light mt-1">
+                  A programme of Meghalaya Bamboo Mission · Prime Meghalaya · Government of Meghalaya
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -912,7 +917,7 @@ export default function LandingPageClient() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="https://forms.gle/pJrUAV2KGf1F4MDeA"
+              href="https://forms.gle/zkvwtg4UHmk4prRV9"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-beige-accent hover:bg-beige-light text-charcoal font-semibold px-8 py-4 rounded-md transition-all tracking-wider uppercase shadow-md text-center inline-flex items-center justify-center gap-2 border border-beige-light/20"
@@ -969,19 +974,13 @@ export default function LandingPageClient() {
           <div className="md:col-span-1">
             <h4 className="font-fraunces font-bold text-lg text-off-white mb-6">Application</h4>
             <ul className="space-y-3 text-xs md:text-sm text-grey-mid">
-              <li><a href="https://forms.gle/pJrUAV2KGf1F4MDeA" target="_blank" rel="noopener noreferrer" className="hover:text-beige-light transition-colors font-semibold text-beige-light flex items-center gap-1.5"><FileText className="w-4 h-4" /> Application Form</a></li>
+              <li><a href="https://forms.gle/zkvwtg4UHmk4prRV9" target="_blank" rel="noopener noreferrer" className="hover:text-beige-light transition-colors font-semibold text-beige-light flex items-center gap-1.5"><FileText className="w-4 h-4" /> Application Form</a></li>
               <li><a href="#" className="hover:text-beige-light transition-colors">Download Residency Brief (PDF)</a></li>
               <li><a href="#" className="hover:text-beige-light transition-colors">Contact Selection Team</a></li>
             </ul>
           </div>
 
-          {/* Admin Dash link */}
-          <div className="md:col-span-1">
-            <h4 className="font-fraunces font-bold text-lg text-off-white mb-6">Portals</h4>
-            <ul className="space-y-3 text-xs md:text-sm text-grey-mid">
-              <li><Link href="/admin" className="hover:text-beige-light transition-colors flex items-center gap-1.5">🔑 Admin Dashboard Gate</Link></li>
-            </ul>
-          </div>
+
 
         </div>
 
