@@ -292,7 +292,7 @@ export default function LandingPageClient() {
             </div>
 
             {/* Premium graphic pavilion render */}
-            <div className="relative w-full h-[300px] md:h-[380px] rounded-2xl overflow-hidden border border-grey-border shadow-lg bg-green-primary flex flex-col justify-end p-8">
+            <div className="relative w-full h-[300px] md:h-[380px] rounded-2xl overflow-hidden border border-grey-border shadow-lg bg-green-primary flex flex-col justify-end">
               {/* SVG decorative grid lines */}
               <div className="absolute inset-0 opacity-15 pointer-events-none">
                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -314,17 +314,15 @@ export default function LandingPageClient() {
                   priority
                   className="object-cover object-center opacity-85 hover:scale-105 transition-transform duration-1000"
                 />
-                {/* Gradient layer for text overlay readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
               </div>
+            </div>
 
-              {/* Bottom context citation */}
-              <div className="relative z-10 flex flex-col text-left">
-                <span className="text-[10px] text-off-white/70 uppercase tracking-widest font-semibold">COHORT CYCLE 2026–2027</span>
-                <span className="text-xs font-fraunces italic text-beige-light mt-1">
-                  A programme of Meghalaya Bamboo Mission · Prime Meghalaya · Government of Meghalaya
-                </span>
-              </div>
+            {/* Bottom context citation moved below the image */}
+            <div className="flex flex-col text-left mt-2">
+              <span className="text-[10px] text-grey-dark uppercase tracking-widest font-semibold">COHORT CYCLE 2026–2027</span>
+              <span className="text-xs font-fraunces italic text-charcoal mt-1">
+                A programme of Meghalaya Bamboo Mission · Prime Meghalaya · Government of Meghalaya
+              </span>
             </div>
           </div>
         </div>
